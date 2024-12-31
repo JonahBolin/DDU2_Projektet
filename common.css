@@ -3,3 +3,27 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 1px;
 }
+
+/*style för header och dess element */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.headerInput {
+    width: 60px;
+    height: 30px;
+    padding: 0px;
+    text-align: center;
+}
+
+.buttonCreate {
+    height: 34px;
+    box-sizing: border-box;
+    background-color: rgb(212, 190, 243);
+    border-radius: 5px;
+}
