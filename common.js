@@ -2,6 +2,13 @@ const body = document.querySelector("body");
 const main = document.querySelector("main");
 
 
+// Funktion som skapar randomNumber
+function createRandomNumber() {
+    //min = 1, max = 95, interval = max -min + min
+    const interval = 95 - 1 + 1;
+    let randomNumber = Math.floor(Math.random() * interval) + 1;
+    return randomNumber;
+}
 // Funktion som skapar Home-knapp
 function createHomePageLink() {
     let homePageLink = document.createElement("a");
@@ -63,5 +70,7 @@ function createGrid(amountOfCells) {
         gridContainer.appendChild(cell);
 
         cell.classList.add("gridCells");
+        const randomNumber = createRandomNumber();
+        cell.textContent = randomNumber;
     }
 }
