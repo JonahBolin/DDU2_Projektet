@@ -35,4 +35,20 @@ function createElementsInHeader() {
     header.appendChild(paragraphInHeader);
     header.appendChild(inputInHeader);
     header.appendChild(buttonCreate);
+//funktion som skapar grid-nätet
+
+function createGridShell(amountOfCells) {
+    const gridContainer = document.querySelector(".gridContainer");
+    gridContainer.classList.add("gridShell");
+
+    gridContainer.style.display = "grid";
+    gridContainer.style.gridTemplateRows = "repeat(5, 1fr)";
+    gridContainer.style.gridTemplateColumns = "repeat(19, 1fr)";
+
+    for (let i = 0; i < amountOfCells; i++) {
+        const cell = document.createElement("div");
+        gridContainer.appendChild(cell);
+
+        cell.classList.add("gridCells");
+    }
 }

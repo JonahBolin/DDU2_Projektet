@@ -27,3 +27,17 @@
     background-color: rgb(212, 190, 243);
     border-radius: 5px;
 }
+
+.gridShell {
+    height: 100%;
+    background-color: rgb(190, 222, 190);
+    gap: 5px;
+}
+
+.gridCells {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    background-color: rgb(136, 47, 47);
+}
