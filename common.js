@@ -35,15 +35,28 @@ function createElementsInHeader() {
     header.appendChild(paragraphInHeader);
     header.appendChild(inputInHeader);
     header.appendChild(buttonCreate);
+
+    buttonCreate.addEventListener("click", function () {
+        const value = parseInt(inputInHeader.value, 10);
+        console.log(value);
+        //anrop till createGrid
+        createGrid(value);
+    })
+}
+
 //funktion som skapar grid-nätet
 
-function createGridShell(amountOfCells) {
+function createGrid(amountOfCells) {
     const gridContainer = document.querySelector(".gridContainer");
     gridContainer.classList.add("gridShell");
+    console.log(gridContainer.innerHTML);
 
     gridContainer.style.display = "grid";
     gridContainer.style.gridTemplateRows = "repeat(5, 1fr)";
     gridContainer.style.gridTemplateColumns = "repeat(19, 1fr)";
+    gridContainer.style.justifyItems = "center";
+
+    gridContainer.innerHTML = "";
 
     for (let i = 0; i < amountOfCells; i++) {
         const cell = document.createElement("div");
