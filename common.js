@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const main = document.querySelector("main");
 
 
 // Funktion som skapar Home-knapp
@@ -17,7 +18,8 @@ createHomePageLink();
 function createElementsInHeader() {
     const header = document.createElement("header");
     header.classList.add("header");
-    body.appendChild(header);
+
+    body.insertBefore(header, main);
 
     const paragraphInHeader = document.createElement("p");
     paragraphInHeader.textContent = 'How many numbers in the grid?';
