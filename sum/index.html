@@ -14,19 +14,23 @@
         <section class="dynamicElements">
             <div class="controls">
                 <p>Sum of all:</p>
-                <input class="headerInput" type="text" />
+                <div class="pContainer">
+                    <p class="pInsideContainer"></p>
+                </div>
             </div>
             <div class="controls">
                 <p>Sum of marked:</p>
-                <input class="headerInput" type="text" value="-" />
+                <div class="pContainer">
+                    <p class="pInsideContainer">-</p>
+                </div>
                 <button id="resetButton">Reset</button>
             </div>
         </section>
 
         <section class="gridContainer"></section>
     </main>
-    <script src="index.js"></script>
     <script src="../common.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
