@@ -11,7 +11,18 @@
 <body>
     <nav class="homePageLinks"></nav>
     <main>
-        <section class="dynamicElements"> </section>
+        <section class="dynamicElements">
+            <div class="controls">
+                <p>Sum of all:</p>
+                <input class="headerInput" type="text" />
+            </div>
+            <div class="controls">
+                <p>Sum of marked:</p>
+                <input class="headerInput" type="text" value="-" />
+                <button id="resetButton">Reset</button>
+            </div>
+        </section>
+
         <section class="gridContainer"></section>
     </main>
     <script src="index.js"></script>

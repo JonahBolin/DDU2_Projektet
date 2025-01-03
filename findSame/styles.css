@@ -1,0 +1,9 @@
+body {
+    background-color: rgba(241, 209, 1, 0.962);
+}
+
+#findSameButton {
+    height: 34px;
+    border-radius: 5px;
+    background-color: rgba(232, 153, 232, 0.906);
+}

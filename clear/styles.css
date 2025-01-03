@@ -1,0 +1,9 @@
+body {
+    background-color: #b07ac0fb;
+}
+
+#clearButton {
+    height: 34px;
+    border-radius: 5px;
+    background-color: #bfffe3;
+}

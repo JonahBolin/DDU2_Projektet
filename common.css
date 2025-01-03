@@ -24,20 +24,33 @@
 .buttonCreate {
     height: 34px;
     box-sizing: border-box;
-    background-color: rgb(212, 190, 243);
+    background-color: #43b3ae;
     border-radius: 5px;
+}
+
+.dynamicElements {
+    display: grid;
+    justify-items: center;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
 }
 
 .gridShell {
     height: 100%;
-    background-color: rgb(190, 222, 190);
     gap: 5px;
 }
 
 .gridCells {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 50px;
     border-radius: 15px;
-    background-color: rgb(136, 47, 47);
+    background-color: #fbceb1;
 }
