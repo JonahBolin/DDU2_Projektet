@@ -1,3 +1,32 @@
+body {
+    background-color: lightcoral;
+}
+
+.controls {
+    margin: 0px;
+}
+
+.pContainer {
+    display: grid;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+    border: 1px solid rgb(60, 59, 59);
+    background-color: white;
+    text-align: center;
+}
+
+.pContainer p {
+    margin: 0px;
+    text-align: center;
+}
+
+#resetButton {
+    border-radius: 5px;
+    height: 34px;
+    background-color: rgba(113, 178, 252, 0.851);
+}
+
 .cellEventColor {
     background-color: rgb(147, 205, 147);
 }
