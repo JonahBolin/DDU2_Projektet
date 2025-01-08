@@ -38,6 +38,12 @@ createNumDivsButton.addEventListener("click", function () {
                     matchedNumDiv.classList.replace("gridCellsColor", "targetedDivsColor");
                     currentTargetedDivs.push(matchedNumDiv);
                 }
+                resetButton.addEventListener("click", function () {
+                    div.classList.replace("targetedDivsColor", "gridCellsColor");
+                    numDiv.classList.replace("targetedDivsColor", "gridCellsColor");
+                    paragraph.textContent = `Click on a number to find copies`;
+                })
+            }
             previousTargetedDivs = currentTargetedDivs;
         })
     })
