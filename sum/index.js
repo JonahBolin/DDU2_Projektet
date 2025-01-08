@@ -52,6 +52,8 @@ ButtonCreate.addEventListener("click", function () {
 
 })
 
+resetButton.addEventListener("click", function () {
+    pSumOfMarked.textContent = "-";
 })
 
 document.addEventListener("DOMContentLoaded", () => {
