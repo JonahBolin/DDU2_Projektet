@@ -10,21 +10,22 @@
 
 <body>
     <nav class="homePageLinks"></nav>
-    <main>
+    <main class="fontInHeaderAndMain">
         <section class="dynamicElements">
             <div class="controls">
-                <button class="removeButtons" id="randomButton">New Random Number</button>
+                <button class="controlsButtons" id="randomButtonColor">New Random Number</button>
                 <div class="pContainer" id="pRandomContainer">
                     <p class="pInsideContainer" id="pRandom">-</p>
                 </div>
-                <button class="removeButtons" id="eraseButton">Remove</button>
+                <button class="controlsButtons" id="eraseButtonColor">Remove</button>
                 <div class="pContainer" id="pRemoveContainer">
                     <p class="pInsideContainer" id="pRemove">-</p>
                 </div>
             </div>
         </section>
-        <section class="gridContainer"></section>
+        <section id="gridMarginRemove" class="gridContainer"></section>
     </main>
+
     <script src="../common.js"></script>
     <script src="index.js"></script>
 </body>

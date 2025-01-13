@@ -1,9 +1,13 @@
 const randomNumberButton = document.getElementById("randomButton");
+const randomNumberButton = document.getElementById("randomButtonColor");
 const pRandom = document.getElementById("pRandom");
 const eraseButton = document.getElementById("eraseButton");
+const eraseButton = document.getElementById("eraseButtonColor");
 const pRemove = document.getElementById("pRemove");
+const createCellsButton = document.querySelector(".buttonCreate");
 
 function findRandomNumberInGrid() {
+function findRandomNumberInGrid(nodeListOfCells) {
 
     const currentCellsInGrid = document.querySelectorAll(".gridCells");
     console.log(currentCellsInGrid, "nodelist av cellerna");
@@ -15,6 +19,7 @@ function findRandomNumberInGrid() {
     let matchCounter = 0;
 
     for (let cell of currentCellsInGrid) {
+    for (let cell of nodeListOfCells) {
         if (Number(cell.textContent) == randomNumber) {
             console.log("Match!");
             matchFound = true;
@@ -41,7 +46,19 @@ function findRandomNumberInGrid() {
 }
 
 
-randomNumberButton.addEventListener("click", function () {
-    findRandomNumberInGrid();
+createCellsButton.addEventListener("click", function () {
+    const currentCellsInGrid = document.querySelectorAll(".gridCells");
+    console.log(currentCellsInGrid);
+    currentCellsInGrid.forEach((cell) => {
+        cell.classList.add("gridCellsHover");
+    })
+    sendCellsToRandomFunction(currentCellsInGrid);
 })
+
+function sendCellsToRandomFunction(currentCellsInGrid) {
+    randomNumberButton.addEventListener("click", function () {
+        findRandomNumberInGrid(currentCellsInGrid);
+    })
+}
+
 
