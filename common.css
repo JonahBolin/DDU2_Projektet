@@ -1,10 +1,43 @@
 .homePageLinks {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Chango', sans-serif;
     letter-spacing: 1px;
 }
 
-/*style för header och dess element */
+.fontInHeaderAndMain {
+    font-family: 'quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+div.homeContainer {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+}
+
+div.gitHubContainer {
+    width: 50%;
+    display: flex;
+    padding-right: 40px;
+}
+
+.homeFontWeight {
+    font-weight: 400;
+}
+
+.gitHub {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: auto;
+}
+
 .header {
     display: flex;
     flex-direction: row;

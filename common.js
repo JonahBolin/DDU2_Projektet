@@ -1,5 +1,11 @@
 const body = document.querySelector("body");
 const main = document.querySelector("main");
+const nav = document.querySelector("nav");
+const homeContainer = document.createElement("div");
+const gitHubContainer = document.createElement("div");
+
+homeContainer.className = "homeContainer";
+gitHubContainer.className = "gitHubContainer";
 
 const header = document.createElement("header");
 header.classList.add("header");
@@ -18,6 +24,8 @@ const buttonCreate = document.createElement("button");
 buttonCreate.classList.add("buttonCreate");
 buttonCreate.textContent = "Create";
 
+nav.appendChild(homeContainer);
+nav.appendChild(gitHubContainer);
 header.appendChild(paragraphInHeader);
 header.appendChild(inputInHeader);
 header.appendChild(buttonCreate);
@@ -31,9 +39,11 @@ function createRandomNumber() {
 }
 // Funktion som skapar Home-knapp
 function createHomePageLink() {
+function createLinks() {
     let homePageLink = document.createElement("a");
     homePageLink.setAttribute("href", "../home.html");
     homePageLink.textContent = "Home";
+    homePageLink.className = "homeFontWeight";
 
     let nav = document.querySelector("nav");
     nav.appendChild(homePageLink);
@@ -42,8 +52,13 @@ function createHomePageLink() {
 //Funktion som skapar elementen i header (<p>, <input>, <button>)
 /*function createElementsInHeader() {
    
+    homeContainer.appendChild(homePageLink);
 
 }*/
+    const gitHubLink = document.createElement("a");
+    gitHubLink.setAttribute("href", "https://github.com/JonahBolin/DDU2_Projektet");
+    gitHubLink.textContent = "Visit my Github repository here";
+    gitHubLink.className = "gitHub";
 
 
 buttonCreate.addEventListener("click", function () {
@@ -52,6 +67,8 @@ buttonCreate.addEventListener("click", function () {
     //anrop till createGrid
     createGrid(value);
 })
+    gitHubContainer.appendChild(gitHubLink);
+}
 
 //funktion som skapar grid-nätet
 
