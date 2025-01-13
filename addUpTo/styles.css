@@ -1,9 +1,19 @@
 body {
-    background-color: rgb(117, 192, 117);
+    background-color: rgb(129, 191, 129);
 }
 
-#addUpToButton {
-    height: 34px;
-    border-radius: 5px;
+#addUpToButtonColor {
     background-color: rgba(255, 166, 0, 0.84);
+}
+
+#addingInput {
+    width: 65px;
+    height: 30px;
+    padding: 0px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.addedUpDivsColor {
+    background-color: #3592ed;
 }
