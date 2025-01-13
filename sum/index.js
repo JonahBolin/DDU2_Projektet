@@ -37,6 +37,7 @@ ButtonCreate.addEventListener("click", function () {
 })
 
 function sendMarkedDivs(numDivsCreated) {
+    let clickedDivs = [];
     let sumOfMarked = 0;
     let listOfNumDivs = document.querySelectorAll(".gridCells");
     for (let numDiv of listOfNumDivs) {
@@ -58,9 +59,23 @@ function sendMarkedDivs(numDivsCreated) {
             numDiv.classList.replace("gridCellsColor", "cellEventColor");
             sumOfMarked += Number(numDiv.textContent);
             console.log(sumOfMarked);
+            clickedDivs.push(numDiv);
+
             pSumOfMarked.textContent = sumOfMarked;
+
+            resetButton.addEventListener("click", function () {
+                pSumOfMarked.textContent = "-";
+                sumOfMarked = 0;
+                if (clickedDivs.length > 0) {
+                    console.log(clickedDivs, "arrayen som innehåller klickade divar som ska rensas");
+                    clickedDivs.forEach((div) => {
+                        div.classList.replace("cellEventColor", "gridCellsColor");
+                    })
+                }
+            })
         })
     }
+    })
 }
 
 //pSumOfMarked.textContent = "";
