@@ -1,9 +1,23 @@
 body {
-    background-color: #b07ac0fb;
+    background-color: #bc8fcafa;
 }
 
 #clearButton {
-    height: 34px;
-    border-radius: 5px;
     background-color: #bfffe3;
+}
+
+#gridMarginClear {
+    margin-top: 10px;
+}
+
+.mouseoverColor {
+    background-color: yellow;
+}
+
+.clickColor {
+    background-color: goldenrod;
+}
+
+.mouseleaveColor {
+    background-color: #44baa3;
 }
