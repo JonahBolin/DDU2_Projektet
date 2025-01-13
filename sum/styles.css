@@ -1,9 +1,5 @@
 body {
-    background-color: lightcoral;
-}
-
-.controls {
-    margin: 0px;
+    background-color: #ea8a8a;
 }
 
 .pContainer {
@@ -13,7 +9,6 @@ body {
     width: 100px;
     border: 1px solid rgb(60, 59, 59);
     background-color: white;
-    text-align: center;
 }
 
 .pContainer p {
@@ -21,12 +16,10 @@ body {
     text-align: center;
 }
 
-#resetButton {
-    border-radius: 5px;
-    height: 34px;
+#resetButtonColor {
     background-color: rgba(113, 178, 252, 0.851);
 }
 
 .cellEventColor {
-    background-color: rgb(147, 205, 147);
+    background-color: rgb(158, 217, 158);
 }

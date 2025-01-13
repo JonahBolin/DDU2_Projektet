@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     createGridShell(95);
 
 let pSumOfAll = document.querySelector(".pInsideContainer");
+let pSumOfAll = document.getElementById("pSumOfAll");
 let pSumOfMarked = document.getElementById("pSumOfMarked");
 console.log(pSumOfMarked);
 
@@ -10,6 +11,7 @@ let ButtonCreate = document.querySelector(".buttonCreate");
 console.log(ButtonCreate);
 
 let resetButton = document.getElementById("resetButton");
+let resetButton = document.getElementById("resetButtonColor");
 
 function sumAllCurrentCells() {
     const allCurrentCells = document.querySelectorAll(".gridCells");
@@ -26,15 +28,34 @@ function sumAllCurrentCells() {
 }
 
 function sumMarkedDivsAndChangeTheirColor() {
+ButtonCreate.addEventListener("click", function () {
+    let listOfNumDivs = document.querySelectorAll(".gridCells");
+    sendMarkedDivs(listOfNumDivs);
 
+    pSumOfAll.textContent = "";
+    pSumOfAll.textContent = sumAllCurrentCells();
+})
+
+function sendMarkedDivs(numDivsCreated) {
     let sumOfMarked = 0;
     let listOfNumDivs = document.querySelectorAll(".gridCells");
     for (let numDiv of listOfNumDivs) {
         console.log(numDiv, "en cell");
+
+    numDivsCreated.forEach((numDiv) => {
+
+        if (sumOfMarked === 0) {
+            console.log(sumOfMarked);
+
+            pSumOfMarked.textContent = "-";
+            pSumOfMarkedMessage(pSumOfMarked.textContent);
+        }
         numDiv.addEventListener("click", function () {
             console.log("en cell klickades på");
             numDiv.classList.remove("gridCellsColor");
             numDiv.classList.add("cellEventColor");
+
+            numDiv.classList.replace("gridCellsColor", "cellEventColor");
             sumOfMarked += Number(numDiv.textContent);
             console.log(sumOfMarked);
             pSumOfMarked.textContent = sumOfMarked;
@@ -49,6 +70,10 @@ ButtonCreate.addEventListener("click", function () {
     pSumOfAll.textContent = sumAllCurrentCells();
 
     pSumOfMarked.textContent = sumMarkedDivsAndChangeTheirColor();
+function pSumOfMarkedMessage(message) {
+    pSumOfMarked.textContent = message;
+    console.log(pSumOfMarked.textContent);
+}
 
 })
 
